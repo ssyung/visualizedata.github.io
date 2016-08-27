@@ -1,35 +1,3 @@
 body {
     font-family: sans-serif;
 }
-
-h3.rh {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1em;
-    letter-spacing: -.5px;
-    margin: 0;
-    padding-bottom: 0px;
-    padding-top: 30px;
-    color: white;
-    
-}
-
-p.rh {
-    font-family: 'Work Sans', sans-serif;
-    letter-spacing: -.5px;
-    margin: 0;
-    font-size: .8em;
-    color: white;
-}
-
-a.rh {
-    font-family: 'Work Sans', sans-serif;
-    letter-spacing: -.5px;
-    color: white;
-    text-decoration: none;
-}
-
-div.rh {
-    background-color: blue;
-    padding: 10px;
-}
