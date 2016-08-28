@@ -15,10 +15,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <div id="headerBar"><div><img src="images/Parsons_Logo1_Small_RGB.png" height=30px /></div></div>
+  <div class="content-container">
     <h1 class = "title">Data Work</h1>
         <div id="categories">
-          <span class="category"><a href="#">Jobs</a></span>
+          <span class="category"><a href="#">Positions</a></span>
           <span class="category"><a href="#">Competitions</a></span>
           <span class="category"><a href="#">Resources</a></span>
         </div>
@@ -43,7 +44,6 @@
   <!--<li>Contact Email</li>-->
   <!--</ul>-->
   
-  </div>
       
   <!-- call d3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
@@ -109,14 +109,22 @@
         thirdCol.append("p")
           .attr("class", "timeSensitive")
           .text(function(d) { 
-            if (timeSensitive) { 
+            if (d.timeSensitive == true) { 
               return "Urgent"; 
             }
         });
         
+        
     }
       
   </script>
+  
+  <div class="tag-container">
+        <a href="#"><span class="tag">Academic Eligible</span></a> <a href="#"><span class="tag">Part-time</span></a> <a href="#"><span class="tag">New School Affiliated</span></a>
+  </div>
+
+  
+  </div>
   
 </body>
 </html>
