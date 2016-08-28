@@ -6,53 +6,112 @@
 
   <title>HTML5 Template</title>
   <meta name="description" content="HTML5 template">
-  <meta name="BlueJays" content="The New School, Parsons School of Design, Datawork">
+  <meta name="author" content="The New School, Parsons School of Design">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
   
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700" rel="stylesheet">
+    <style>
+    
+  /* these styles are just placeholders for now */
+    
+  .content {
+    background-color: #EFEFEF;
+    width: 90%;
+    height: auto;
+    float: left;
+    display: block;
+    margin: 10px;
   
+  }
+  
+  .orgName {
+    font-size: 1em;
+    font-family: sans-serif;
+  }
+  
+  .dateAdded {
+    font-family: sans-serif;
+    font-size: 1em;
+  }
+  
+  .description {
+    font-family: sans-serif;
+    font-size: .5em;
+  }
+  
+  </style>
 </head>
 
 <body>
-  
-  <span id="maintitle"><h1>Data Work</h1></span>
-  <div id="categories">
-    <span class="category"><a href="#">Jobs</a></span>
-    <span class="category"><a href="#">Competitions</a></span>
-    <span class="category"><a href="#">Resources</a></span>
-    </div>
-  
-  <div>
-  <ul>Organized by</ul>
-  <li>Organization Name</li>
-  <li>Data Source and Resources</li>
-  <li>Data Competition</li>
-  <li>Position</li>
-  <li>New School Affiliated</li>
-  <li>Paid and Unpaid</li>
-  <li>Full and Part Time</li>
-  <li>Grants and Fellowships</li>
-  <li>Eligibility for Academic Credit</li>
-  <li>Date Added</li>
-  <li>Time Sensitive</li>
-  <li>Description</li>
-  <li>Contact Name</li>
-  <li>Contact Email</li>
-  </div>
-  
-  <div id="listings">
-    <div class="date">16 Oct 2015</div>
-    <div class="listing-data"><h1>The Center for New York City Affairs</h1>
-      <span class="description">Build interactive features and better search mechanisms for insideschools.org: Right now our site is really flat and hardly customizable by the user. There are other examples of school search sites and other types of location-based searches (e.g. Yelp) that we like a lot, with features like map views of search results, visualizations of trends over time, comparisons to \"favorited\" schools, etc. You said this would be more appropriate for a UX class, so not sure if that's this semester or not. But we are planning on doing a massive overhaul of our site in the next year or two, and it would be great to put some Parsons brains behind it to do mock-ups and/or focus groups before we contract out with a professional design team.</span>
-      <div class="tag-container">
-        <a href="#"><span class="tag">Academic Eligible</span></a> <a href="#"><span class="tag">Part-time</span></a> <a href="#"><span class="tag">New School Affiliated</span></a>
+  <div class="container">
+    <h1 class = "title">Data Work</h1>
+        <div class="row">
+           <div class="col-md-4"> 
+             <h2><a href='jobs.html'>Jobs</a></h2> 
+             <p>Discover full-time and part-time jobs in data visualization.</p> 
+          </div>
+          <div class="col-md-4"> 
+             <h2><a href='resources.html'>Resources</a></h2> 
+            <p>A database of data sources, software, or other tools for the analysis and visualization of data</p> </div>
+       <div class="col-md-4"> 
+             <h2><a href='resources.html'>Competition</a></h2> 
+            <p>Explore data visualization hackathons and competitions</p> </div>
+        </div>
+      
+      <div id="autoContent">
       </div>
-    </div>
-    <div class="left-column"><h3>Urgent<br>Full-time<br>Paid</h3></div>
+      
+  <!--<ul class=buttons> Organized by-->
+  <!--<li>Organization Name</li>-->
+  <!--<li>Data Source and Resources</li>-->
+  <!--<li>Data Competition</li>-->
+  <!--<li>Position</li>-->
+  <!--<li>New School Affiliated</li>-->
+  <!--<li>Paid and Unpaid</li>-->
+  <!--<li>Full and Part Time</li>-->
+  <!--<li>Grants and Fellowships</li>-->
+  <!--<li>Eligibility for Academic Credit</li>-->
+  <!--<li>Date Added</li>-->
+  <!--<li>Time Sensitive</li>-->
+  <!--<li>Description</li>-->
+  <!--<li>Contact Name</li>-->
+  <!--<li>Contact Email</li>-->
+  <!--</ul>-->
+  
   </div>
-  
-  
+      
+  <!-- call d3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
   <!--<script src="js/scripts.js"></script>-->
+  <script>
+    
+    d3.json("../data/datawork.json", ready);
+
+    function ready(error, data) {
+        if (error) throw "error loading data";
+        
+        var container = d3.select("#autoContent").selectAll("div")
+          .data(data)
+          .enter()
+          .append("div")
+          .attr("class", "content");
+          
+        container.append("h1")
+          .attr("class", "orgName")
+          .text(function(d) { return d.organizationName; });
+          
+        container.append("h3")
+          .attr("class", "dateAdded")
+          .text(function(d) { return d.dateAdded; });
+          
+        container.append("p")
+          .attr("class", "description")
+          .text(function(d) { return d.description; });
+          
+        
+    }
+      
+  </script>
+  
 </body>
 </html>
