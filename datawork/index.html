@@ -6,16 +6,29 @@
 
   <title>HTML5 Template</title>
   <meta name="description" content="HTML5 template">
-  <meta name="BlueJays" content="The New School, Parsons School of Design, Datawork">
+  <meta name="author" content="The New School, Parsons School of Design">
 
   <!-- <link rel="stylesheet" href="css/styles.css"> -->
 </head>
 
 <body>
-  <h1>Data Work</h1>
-  <h3>Jobs - Resources - Competitions</h3>
+  <div class="container">
+    <h1 class = "title">Data Work</h1>
+        <div class="row">
+           <div class="col-md-4"> 
+             <h2><a href='jobs.html'>Jobs</a></h2> 
+             <p>Discover full-time and part-time jobs in data visualization.</p> 
+          </div>
+          <div class="col-md-4"> 
+             <h2><a href='resources.html'>Resources</a></h2> 
+            <p>A database of data sources, software, or other tools for the analysis and visualization of data</p> </div>
+       <div class="col-md-4"> 
+             <h2><a href='resources.html'>Competition</a></h2> 
+            <p>Explore data visualization hackathons and competitions</p> </div>
+        </div>
+      
   
-  <ul>Organized by</ul>
+  <ul class=buttons> Organized by
   <li>Organization Name</li>
   <li>Data Source and Resources</li>
   <li>Data Competition</li>
@@ -30,7 +43,9 @@
   <li>Description</li>
   <li>Contact Name</li>
   <li>Contact Email</li>
+  </ul>
   
+  </div>
   
   <!--<script src="js/scripts.js"></script>-->
 </body>
