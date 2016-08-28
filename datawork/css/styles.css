@@ -1,0 +1,66 @@
+    body{
+        max-width: 75%;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+
+    h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 32px;
+        color: #E82E21;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    
+    #maintitle h1{
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: 5px solid #000000;
+        padding-bottom: 0px;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    
+    #categories {
+        border-bottom: 1px solid #979797;
+        height: 30px;
+        
+    }
+    
+    .category {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 11px;
+        color: #000000;
+        text-transform: uppercase;
+        padding: 10px 25px 10px 25px;
+        border-right: 1px solid #E5E5E5;
+    }
+    
+    .category a:active {
+        font-weight: 700;
+        color:#E82E21;
+    }
+    
+    #listings {
+        margin-top: 20px;
+    }
+    
+    .date {
+        max-width: 17%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 15px;
+        color: #000000;
+        font-weight: 400;
+        border-top: 2px solid #000000;
+        display: block;
+    }
+    
+    .listing-data {
+        width: 66%;
+        border-top: 2px solid #000000;
+        display: inline-block;
+    }
