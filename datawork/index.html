@@ -61,6 +61,10 @@
           .append("div")
           .attr("class", "content");
           
+        
+        var tagContainer = container.append("div")
+          .attr("class", "tag-container");
+          
         container.append("h1")
           .attr("class", "orgName")
           .text(function(d) { return d.organizationName; });
@@ -73,6 +77,42 @@
           .attr("class", "description")
           .text(function(d) { return d.description; });
           
+        container.append("p")
+          .attr("class", "contactName")
+          .text(function(d) { 
+            if (d.contactName != "") {
+            return "Contact: " + d.contactName + ", " + d.contactEmail; 
+            }
+        });
+        
+        container.append("p")
+          .attr("class", "url")
+          .text(function(d) { 
+            if (d.url != "") {
+            return "Website: " + d.url; 
+            }
+        });
+        
+        var thirdCol = container.append("div")
+          .attr("class", "thirdCol");
+        
+        thirdCol.append("p")
+          .attr("class", "unpaidPosition")
+          .text(function(d) { 
+            if (d.parttimePosition || d.fulltimePosition) { 
+              if (d.unpaidPosition == false) {
+              return "Paid"; 
+              }
+            }
+        });
+        
+        thirdCol.append("p")
+          .attr("class", "timeSensitive")
+          .text(function(d) { 
+            if (timeSensitive) { 
+              return "Urgent"; 
+            }
+        });
         
         
     }
