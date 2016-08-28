@@ -16,7 +16,7 @@
 
 <body>
   <div id="headerBar"><div><img src="images/Parsons_Logo1_Small_RGB.png" height=30px /></div></div>
-  <div class="container">
+  <div class="content-container">
     <h1 class = "title">Data Work</h1>
         <div id="categories">
           <span class="category"><a href="#">Positions</a></span>
@@ -109,7 +109,7 @@
         thirdCol.append("p")
           .attr("class", "timeSensitive")
           .text(function(d) { 
-            if (timeSensitive) { 
+            if (d.timeSensitive == true) { 
               return "Urgent"; 
             }
         });

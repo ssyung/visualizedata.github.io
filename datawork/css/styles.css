@@ -13,7 +13,7 @@
         padding-top: 10px;
     }
     
-    .container {
+    .content-container {
         max-width: 75%;
         margin: 0 auto !important;
         float: none !important;
@@ -69,8 +69,13 @@
     
     
     /*---- LISTINGS ----*/
+    .container {
+        position: absolute;
+    }
+    
     .content {
         margin-top: 0px;
+        position: relative;
     }
     
     .dateAdded {
@@ -85,13 +90,38 @@
         padding-top: 5px;
     }
     
+    .thirdCol {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        width: 15%;
+        border-top: 2px solid #000000;
+    }
+    
+    .unpaidPosition {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 4px;
+    }
+    
+    .timeSensitive {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: -10px;
+    }
+    
     .orgName {
         display: inline-block;
-        width: 84%;
+        width: 68%;
         border-top: 2px solid #000000;
         font-family: 'Ubuntu', sans-serif;
         font-size: 32px;
         margin-top: 15px;
+        margin-right: 1%;
         color: #E82E21;
         font-weight: 400;
     }
@@ -100,10 +130,11 @@
         font-family: Arial, sans-serif;
         font-size: 12px;
         color: #636362;
-        width: 84%;
+        width: 68%;
         float: right;
+        margin-right: 16%;
         margin-top: -10px;
-        margin-bottom: 25px;
+        margin-bottom: 0px;
     }
     
     .contactName {
@@ -111,9 +142,8 @@
         font-size: 11px;
         font-weight: bold;
         color: #636362;
-        width: 84%;
+        width: 68%;
         margin-top: -10px;
-        float: right;
     }
     
     .url {
@@ -122,14 +152,15 @@
         font-weight: bold;
         color: #636362;
         display: inline-block;
-        width: 84%;
+        width: 68%;
+        margin-left: 16%;
     }
     
     
     /*---------FOR TAGS (LATER)---------*/
     .tag-container {
         margin-top: 20px;
-        width: 84%;
+        width: 68%;
         float: right;
     }
     
@@ -149,19 +180,4 @@
         background-color: #636362;
     }
     
-    .left-column {
-        width: 16%;
-        border-top: 2px solid #000000;
-        display: inline-block;
-        line-height: 22px;
-        vertical-align: top;
-    }
     
-    .left-column h3{
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 20px;
-        text-transform: uppercase;
-        color: #000000;
-        font-weight: 700;
-        margin-top: 15px;
-    }
